@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- A classe 'dark' será adicionada pelo JS -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos - PLATOTRUCK</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Ícones do Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS EMBUTIDO (Conteúdo do style.css) -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <div class="container header-content">
+            <img src="./assets/logo-rodape-1-qzns4pu5wdvv9uwh9q69yv0u0kf8aa495s8jzutnlu.png.webp" alt="Logo Plato Truck" class="logo">
+            <nav class="header-actions">
+                <button class="theme-toggle" id="theme-toggle-button" aria-label="Alternar tema">
+                    <!-- O ícone agora tem um ID para ser alterado pelo JS -->
+                    <span class="material-icons" id="theme-icon">dark_mode</span>
+                </button>
+                <button class="admin-button">
+                    Administrativo
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <h2 class="main-title">Catálogo de Produtos</h2>
+
+        <!-- Seção de Filtros -->
+        <section class="filters-container">
+            <div class="filters-grid">
+                <!-- Buscar Produto -->
+                <div class="form-group">
+                    <label for="search-product">Buscar produto</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="search-product" placeholder="Ex: MB7315 ou ATUADOR ATEGO">
+                        <span class="material-icons icon">search</span>
+                    </div>
+                </div>
+                <!-- Marca -->
+                <div class="form-group">
+                    <label for="brand">Marca</label>
+                    <select id="brand">
+                        <option>Todas as marcas</option>
+                    </select>
+                </div>
+                <!-- Item -->
+                <div class="form-group">
+                    <label for="item">Item</label>
+                    <select id="item">
+                        <option>Todos os itens</option>
+                    </select>
+                </div>
+            </div>
+            <button class="search-button">Buscar</button>
+        </section>
+
+        <!-- Barra de Resumo -->
+        <div class="summary-bar">
+            <p>1168 produtos cadastrados</p>
+        </div>
+
+        <!-- Tabela de Produtos -->
+        <section class="table-container">
+            <table id="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Marca</th>
+                        <th>Item</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <!-- Os dados do Excel serão inseridos aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+     <!-- Carregando o arquivo JavaScript no final do body -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
