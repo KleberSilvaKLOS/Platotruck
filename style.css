@@ -270,7 +270,7 @@
         }
 
         td {
-            padding: 1px 24px;
+            padding: 10px 24px;
             color: var(--color-text-secondary);
             vertical-align: middle;
         }
