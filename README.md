@@ -43,3 +43,7 @@ O tema claro é o padrão da aplicação e é definido nas variáveis CSS no arq
 Quando a classe `.dark` é adicionada ao elemento `body`, a aplicação muda para o tema escuro, proporcionando uma experiência visual diferente para os usuários.
 
 As classes e estilos são gerenciados de forma a garantir uma transição suave entre os temas, melhorando a usabilidade e a estética da aplicação.
+
+### Tela Login
+
+Foi adicionado tambem uma tela para quando clicar em "Administrativo" Para o usuário conseguir verificar as demais coisas.
