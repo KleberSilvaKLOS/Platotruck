@@ -3,9 +3,9 @@
 
         /* Tema Claro (Padrão) */
         :root {
-            --color-background: #ffffff;
+            --color-background: #e7e7e7;
             --color-surface: #ffffff; /* Cor dos cards e header */
-            --color-surface-light: #F4F4F4; /* Fundo de linha alternada */
+            --color-surface-light: #ebebeb; /* Fundo de linha alternada */
             --color-primary: #1d4ed8;
             --color-primary-dark: #1e40af;
             --color-text-primary: #111827;
@@ -19,7 +19,7 @@
 
         /* Tema Escuro (Quando a classe .dark está no body) */
         body.dark {
-            --color-background: #121212;
+            --color-background: #1b1b1b;
             --color-surface: #1F2937;
             --color-surface-light: #242424;
             --color-primary: #1d4ed8;
@@ -299,7 +299,7 @@
             }
             
             table {
-                border: none;
+                border: 0px;
             }
 
             thead {
@@ -308,13 +308,13 @@
 
             tbody, tr, td {
                 display: block;
-                width: 100%;
+                width: auto;
             }
             
             tr {
                 border: 1px solid var(--color-border);
                 border-radius: 8px;
-                margin-bottom: 16px;
+                margin: 4px 4px 16px;
             }
             
             tr:last-child {
@@ -428,4 +428,19 @@ body.dark .autocomplete-list li:hover {
 
 .admin-button:hover {
   background-color: #1e40af;
+}
+
+.sair-button {
+  background-color: #eb2525;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.sair-button:hover {
+  background-color: #741515;
 }

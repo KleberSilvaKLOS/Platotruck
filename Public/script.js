@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
         dados.forEach(linha => {
             const tr = document.createElement("tr");
             tr.innerHTML = `
-                <td data-label="Item">${linha.SKU || ""}</td>
-                <td data-label="SKU">${linha.Marca || ""}</td>
-                <td data-label="Marca">${linha.Item || ""}</td>
+                <td data-label="SKU">${linha.SKU || ""}</td>
+                <td data-label="Marca">${linha.Marca || ""}</td>
+                <td data-label="Item">${linha.Item || ""}</td>
                 <td data-label="Descrição">${linha.Descrição || ""}</td>
             `;
             tabelaBody.appendChild(tr);
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ================================================================
-    // 🧩 PREENCHER COMBOS DE MARCA E ITEM
+    // PREENCHER COMBOS DE MARCA E ITEM
     // ================================================================
     function preencherFiltros(dados) {
         const marcas = [...new Set(dados.map(d => d.Marca).filter(Boolean))].sort();
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ================================================================
-// senha de acesso admin      
+// SENHA PARA ÁREA ADMINISTRATIVA     
 // ================================================================
 document.addEventListener("DOMContentLoaded", () => {
   const adminBtn = document.querySelector(".admin-button");
