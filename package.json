@@ -1,0 +1,27 @@
+{
+  "name": "platotruck",
+  "version": "1.0.0",
+  "description": "Platotruck",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KleberSilvaKLOS/Platotruck.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KleberSilvaKLOS/Platotruck/issues"
+  },
+  "homepage": "https://github.com/KleberSilvaKLOS/Platotruck#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  }
+}
