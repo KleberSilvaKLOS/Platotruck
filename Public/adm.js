@@ -1,8 +1,3 @@
-// Bloqueia acesso direto à página admin se não estiver autenticado
-// if (localStorage.getItem("autenticado") !== "true") {
-//   window.location.href = "login.html";
-// }
-
 document.addEventListener('DOMContentLoaded', () => {
     // ================================================================
     // CONTROLE DE TEMA
@@ -196,4 +191,20 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "/login";
     });
   }
+});
+
+document.getElementById('sair-button').addEventListener('click', function(e) {
+    // 1. IMPEDE O COMPORTAMENTO PADRÃO do link '#'
+    e.preventDefault(); 
+
+    // 2. AÇÃO CRUCIAL: REMOVE A CHAVE
+    // Esta linha deve ser executada!
+    localStorage.removeItem("autenticado");
+
+    // 3. Redireciona para o login
+    // Coloque um pequeno delay (50ms) se o redirecionamento estiver sendo 
+    // executado antes da remoção da chave ser processada pelo navegador.
+    setTimeout(function() {
+        window.location.href = "/login.html"; 
+    }, 50); 
 });
