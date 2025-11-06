@@ -1,3 +1,8 @@
+// Bloqueia acesso direto à página admin se não estiver autenticado
+if (localStorage.getItem("autenticado") !== "true") {
+  window.location.href = "login.html";
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // ================================================================
     // CONTROLE DE TEMA
