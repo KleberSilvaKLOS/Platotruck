@@ -63,3 +63,43 @@ app.get("/logout", (req, res) => {
 
 // Inicia o servidor
 app.listen(3000, () => console.log("Servidor rodando em http://localhost:3000"));
+
+// No seu arquivo server.js
+
+const XLSX = require('xlsx'); 
+// ... (restante do seu código Node.js/Express) ...
+
+// Função que faz o trabalho de contar
+function contarLinhasExcel() {
+    try {
+        // O arquivo deve estar no mesmo nível do server.js
+        const workbook = XLSX.readFile('produtos.xlsx'); 
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+
+        // Converte a planilha em um array de arrays
+        const dados = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+        // Contagem total de linhas no array
+        let totalLinhas = dados.length;
+
+        // Subtrai 1 para ignorar a primeira linha (cabeçalho)
+        if (totalLinhas > 0) {
+            totalLinhas -= 0; 
+        }
+
+        return totalLinhas;
+    } catch (error) {
+        console.error("Erro ao ler produtos.xlsx:", error);
+        return 0; // Retorna 0 em caso de erro
+    }
+}
+
+// Exemplo de uma rota de API (se estiver usando Express)
+app.get('/api/total-produtos', (req, res) => {
+    const total = contarLinhasExcel();
+    // Envia o número como JSON
+    res.json({ count: total }); 
+});
+
+// ... (o restante do seu código para iniciar o servidor) ...
