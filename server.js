@@ -19,7 +19,7 @@ app.use(
 );
 
 // Senha única
-const SENHA_ADMIN = "1234"; // 🔒 troque por uma senha segura!
+const SENHA_ADMIN = "12345"; // 🔒 troque por uma senha segura!
 
 // Página inicial
 app.get("/", (req, res) => {
